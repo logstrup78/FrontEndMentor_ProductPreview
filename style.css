@@ -1,0 +1,132 @@
+:root {
+    --H1-font: "Fraunces", system-ui;
+    --body-font: "Montserrat", sans-serif;
+
+    --background: #F2EAE2;
+    --body-color: #6C7289;
+    --color-green: #3D8168;
+
+}
+
+body {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    background: var(--background);
+
+}
+
+
+h1 {
+    font-family: var(--H1-font);
+    font-size: 32px;
+}
+
+/*Layout for container */
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    margin-inline: auto;
+    width: 343px;
+    background: #fff;
+    border-radius: 10px;
+
+
+
+}
+
+.container picture img{
+    
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+/* section layout */
+
+
+section {
+    padding: 0 24px;
+    padding-bottom: 24px;
+}
+
+section p {
+    font-family: var(--body-font);
+    color: var(--body-color);
+}
+
+
+
+.sub-heading {
+    font-family: var(--body-font);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.price {
+    display: flex;
+    gap: 15px;
+}
+
+span {
+    font-family: var(--H1-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.price p{
+    text-decoration: line-through;
+}
+
+
+.btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 295px;
+    background: var(--color-green);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+}
+
+
+
+/* footer section */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+/* Mediaqueries */
+
+@media (min-width: 600px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 600px;
+    }
+    .container picture img{
+        display: none;
+        }
+    .container picture{
+        background-image: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        
+        }
+}
